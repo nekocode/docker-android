@@ -1,9 +1,12 @@
-FROM centos:7
+FROM ubuntu:14.04
 MAINTAINER nekocode <nekocode.cn@gmail.com>
 
 # Dependencies to execute Android builds
-RUN yum install -y wget && \
-    yum install -y ncurses-devel ncurses-libs libstdc++ zlib
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get install -y wget && \
+    apt-get install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386 && \
+    apt-get clean
 
 # Download JDK 7
 RUN wget -q --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz -O Jdk7.tar.gz && \
