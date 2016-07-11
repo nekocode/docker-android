@@ -5,8 +5,8 @@ Docker image for Android builds.
 
 ## Version
 
-- **CentOS 7:** `[/Dockerfile](Dockerfile)`
-- **Ubuntu 14.04:** ``[/ubuntu/Dockerfile](/ubuntu/Dockerfile)``
+- **CentOS 7:** [Dockerfile](Dockerfile)
+- **Ubuntu 14.04:** [ubuntu/Dockerfile](ubuntu/Dockerfile)
 
 ## Included
 
