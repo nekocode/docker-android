@@ -36,9 +36,7 @@ ENV PATH $PATH:$ANDROID_HOME/platform-tools
 ENV PATH $PATH:$ANDROID_HOME/build-tools/23.0.3
 
 # Install Android SDK components
-RUN echo y | android update sdk --no-ui --all \
-    --proxy-host android-mirror.bugly.qq.com --proxy-port 8080 -s --filter \
+RUN echo y | android update sdk --no-ui --all --filter \
     "platform-tools,build-tools-23.0.3,build-tools-24.0.0,android-23,android-24" && \
-    echo y | android update sdk --no-ui --all \
-    --proxy-host android-mirror.bugly.qq.com --proxy-port 8080 -s --filter \
+    echo y | android update sdk --no-ui --all --filter \
     "extra-android-m2repository,extra-google-m2repository,extra-android-support"
