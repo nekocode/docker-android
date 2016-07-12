@@ -3,17 +3,19 @@
 
 Docker image for Android builds.
 
-## Version
+## Base Image
 
-- **CentOS 7:** [Dockerfile](Dockerfile)
-- **Ubuntu 14.04:** [ubuntu/Dockerfile](ubuntu/Dockerfile)
+It use CentOS 7 as default base image. But you have another choice base on Ubuntu 14.04. [ubuntu/Dockerfile](ubuntu/Dockerfile).
 
-## Included
+## What's Included
 
-- Oracle JDK7 & JDK8
+- Oracle Java 8
 - Android SDK
+ - Build Tools 23.0.3 & 24.0.0
+ - Platform SDK 23 & 24
+- Pre-installed Gradle version 2.10
 
-## Pull
+## Usage
 
 You can pull the image form DaoCloud's image repository by using `docker pull` or [`dao pull`](https://dashboard.daocloud.io/mirror).
 
