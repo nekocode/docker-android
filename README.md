@@ -26,4 +26,4 @@ dao pull daocloud.io/nekocode/docker-android:<lastest-verion>
 
 You can get the `<lastest-verion>` [here](https://dashboard.daocloud.io/packages/4c0f5468-9623-4ffb-8dd2-e2680ba9ab9d).
 
-In CI enviroment, you can use `gradle app:assembleRelease` instead of `./gradlew app:assembleRelease` to speed your build.
+In CI enviroment, you can use `gradle app:assembleRelease` instead of `./gradlew app:assembleRelease` to speed up your build.
