@@ -3,7 +3,7 @@ MAINTAINER nekocode <nekocode.cn@gmail.com>
 
 # Install Dependencies
 RUN yum install -y wget unzip && \
-    yum install -y ncurses-devel.i686 ncurses-libs.i686 libstdc++.i686 zlib glibc.i686
+    yum install -y glibc.i686 glibc-devel.i686 libstdc++.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686 libXrandr.i686
 
 # Download JDK 8
 RUN wget -q --no-check-certificate -c \
