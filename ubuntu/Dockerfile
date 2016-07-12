@@ -19,9 +19,9 @@ RUN wget -q --no-check-certificate -c --header "Cookie: oraclelicense=accept-sec
     rm Jdk8.tar.gz
 
 # Configure Java Environment
-ENV JAVA7_HOME /opt/jdk1.7.0_79
+# ENV JAVA7_HOME /opt/jdk1.7.0_79
 ENV JAVA8_HOME /opt/jdk1.8.0_77
-ENV JAVA_HOME /opt/jdk1.7.0_79
+ENV JAVA_HOME $JAVA8_HOME
 ENV PATH $PATH:$JAVA_HOME/bin
 
 # Download Android SDK tools
@@ -44,12 +44,12 @@ RUN echo y | android update sdk --no-ui --all --filter \
 # Setup Gradle
 ENV GRADLE_VERSION 2.10
 RUN wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip" -O gradle.zip && \
-    unzip gradle.zip -d /opt && \
-    ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/bin/gralde && \
+    unzip -q gradle.zip -d /opt && \
+    ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/bin/gradle && \
     rm gradle.zip
 
 # Configure Gradle Environment
-RUN mkdir ~/.gradle
-ENV GRADLE_HOME /opt/gradle
-ENV GRADLE_USER_HOME ~/.gradle
+ENV GRADLE_HOME /opt/gradle-${GRADLE_VERSION}
 ENV PATH $PATH:$GRADLE_HOME/bin
+RUN mkdir ~/.gradle
+ENV GRADLE_USER_HOME ~/.gradle
