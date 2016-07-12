@@ -36,8 +36,8 @@ RUN echo y | android update sdk --no-ui --all --filter \
     "extra-android-m2repository,extra-google-m2repository,extra-android-support"
 
 # Setup Gradle
-ENV GRADLE_VERSION 2.10
-RUN wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip" -O gradle.zip && \
+ENV GRADLE_VERSION 2.13
+RUN wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" -O gradle.zip && \
     unzip -q gradle.zip -d /opt && \
     ln -s "/opt/gradle-${GRADLE_VERSION}/bin/gradle" /usr/bin/gradle && \
     rm gradle.zip

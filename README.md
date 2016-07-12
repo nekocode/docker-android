@@ -13,7 +13,7 @@ It use CentOS 7 as default base image. But you have another choice base on Ubunt
 - Android SDK
  - Build Tools 23.0.3 & 24.0.0
  - Platform SDK 23 & 24
-- Pre-installed Gradle version 2.10
+- Pre-installed Gradle version 2.13
 
 ## Usage
 
