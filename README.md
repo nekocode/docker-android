@@ -11,9 +11,9 @@ It use CentOS 7 as default base image. But you have another choice base on Ubunt
 
 - Oracle Java 8
 - Android SDK
- - Build Tools 23.0.3 & 24.0.0
+ - Build Tools 23.0.3 & 24.0.3
  - Platform SDK 23 & 24
-- Pre-installed Gradle version 2.13
+- Pre-installed Gradle version 3.1
 
 ## Usage
 
